@@ -8,21 +8,13 @@ def draw_ci(cX, cY, size, color, win):
     circle.draw(win)
 
 def draw_be(bX, bY, bSize, bColor1, bColor2, bWin):
-
-##    for i in range (5):
-##        if (i) % 2 == 1:
-##            cCol = bColor1
-##            else:
-##                
-##                 draw_ci(bX, bY, bSize, cCol, bWin)
-##                 bSize -= 10
-        draw_ci(bX, bY, bSize, bColor1, bWin)
-        draw_ci(bX, bY, bSize - 10, bColor2, bWin)
-        draw_ci(bX, bY, bSize - 20, bColor1, bWin)
-        draw_ci(bX, bY, bSize - 30, bColor2, bWin)
-        draw_ci(bX, bY, bSize - 40, bColor1, bWin)
-
-
+    for i in range (5):
+        if (i) % 2 == 1:
+            cCol = bColor1
+        else:
+            cCol = bColor2
+        draw_ci(bX, bY, bSize, cCol, bWin)
+        bSize -= 10
 
 ciSz = 50
 
