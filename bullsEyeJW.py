@@ -21,11 +21,26 @@ def draw_be(bX, bY, rings, rSize, bColor1, bColor2, bWin):
 
 ciSz = 50
 
+rinS = False
+
+while rinS == False:
+    try:
+        rS = int(input("How many rings would you like your bullsEye to have?"))
+        if rS > 0:
+            
+            rinS = True
+        else:
+            print ("Trying using a Positive interger.")
+
+    except ValueError:
+        print("You should try using a number.")
+        
+
 
 bullWin = GraphWin("BullsEye", ciSz*10, ciSz*10)
 bullWin.setCoords(0, 0, ciSz*10, ciSz*10)
 
-for j in range (10):
+for j in range (rS):
     ranX = randint(ciSz, ciSz * 9)
     ranY = randint(ciSz, ciSz * 9)
     ranSiz = randint(1, 20)
