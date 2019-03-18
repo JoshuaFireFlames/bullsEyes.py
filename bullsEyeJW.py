@@ -1,3 +1,4 @@
+
 #bullsEye by joshGara
 
 from graphics import *
@@ -24,11 +25,11 @@ ciSz = 50
 bullWin = GraphWin("BullsEye", ciSz*10, ciSz*10)
 bullWin.setCoords(0, 0, ciSz*10, ciSz*10)
 
-for j in range (20):
+for j in range (10):
     ranX = randint(ciSz, ciSz * 9)
     ranY = randint(ciSz, ciSz * 9)
-    ranSiz = randint(1, 50)
-    draw_be(ranX, ranY, 10, 4, "dark blue", "white", bullWin)
+    ranSiz = randint(1, 20)
+    draw_be(ranX, ranY, ranSiz, 4, "dark blue", "red", bullWin)
 
 
 bullWin.getMouse()
