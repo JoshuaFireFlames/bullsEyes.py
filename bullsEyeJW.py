@@ -29,7 +29,11 @@ for j in range (10):
     ranX = randint(ciSz, ciSz * 9)
     ranY = randint(ciSz, ciSz * 9)
     ranSiz = randint(1, 20)
-    draw_be(ranX, ranY, ranSiz, 4, "dark blue", "red", bullWin)
+    ranR = randint(0,255)
+    ranB = randint(0,255)
+    ranG = randint(0,255)
+    bColor1 = color_rgb(ranR, ranB, ranG)
+    draw_be(ranX, ranY, ranSiz, 4, bColor1, "black", bullWin)
 
 
 bullWin.getMouse()
