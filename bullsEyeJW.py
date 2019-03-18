@@ -25,22 +25,22 @@ rinS = False
 
 while rinS == False:
     try:
-        rS = int(input("How many rings would you like your bullsEye to have?"))
-        if rS > 0:
+        numB = int(input("How many bullsEyes would you like to have?"))
+        if numB > 0:
             
             rinS = True
         else:
             print ("Trying using a Positive interger.")
 
     except ValueError:
-        print("You should try using a number.")
+        print("You should try using a whole number.")
         
 
 
 bullWin = GraphWin("BullsEye", ciSz*10, ciSz*10)
 bullWin.setCoords(0, 0, ciSz*10, ciSz*10)
 
-for j in range (rS):
+for j in range (numB):
     ranX = randint(ciSz, ciSz * 9)
     ranY = randint(ciSz, ciSz * 9)
     ranSiz = randint(1, 20)
